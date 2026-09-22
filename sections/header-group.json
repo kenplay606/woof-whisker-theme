@@ -13,11 +13,13 @@
           }
         }
       },
-      "block_order": ["announcement"],
+      "block_order": [
+        "announcement"
+      ],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
-        "color_scheme": "scheme-3",
+        "color_scheme": "",
         "show_line_separator": false,
         "show_social": false,
         "enable_country_selector": false,
@@ -33,8 +35,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
         "show_line_separator": true,
-        "color_scheme": "scheme-1",
-        "menu_color_scheme": "scheme-1",
+        "color_scheme": "",
+        "menu_color_scheme": "",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "margin_bottom": 0,
@@ -43,5 +45,8 @@
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }

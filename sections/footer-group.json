@@ -5,7 +5,7 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "",
         "newsletter_enable": true,
         "newsletter_heading": "Selected styles on sale",
         "enable_follow_on_shop": false,
@@ -20,5 +20,7 @@
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
