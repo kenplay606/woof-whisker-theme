@@ -242,9 +242,11 @@ sticky-header,
 .ww-polaroid img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center bottom;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center center;
+  background: #e7dccb;
   border-radius: 10px;
 }
 
@@ -303,17 +305,21 @@ sticky-header,
   .ww-featured__inner { grid-template-columns: 1fr 1fr; }
 }
 .ww-featured__media {
-  min-height: 320px;
-  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ww-paper-2);
 }
 @media (min-width: 750px) {
-  .ww-featured__media { min-height: 576px; }
+  .ww-featured__media { min-height: 520px; }
 }
 .ww-featured__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
+  max-height: 640px;
+  object-fit: contain;
+  object-position: center center;
   display: block;
 }
 .ww-featured__copy {
@@ -471,12 +477,9 @@ sticky-header,
 .ww-card__img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center center;
   display: block;
-  transition: transform 0.2s ease;
-}
-.ww-card:hover .ww-card__img-wrap img {
-  transform: scale(1.03);
 }
 .ww-card__body {
   display: flex;
@@ -580,3 +583,62 @@ sticky-header,
 .ww-card__cta .ww-btn {
   width: 100%;
 }
+
+/* Full product photos — never crop on mobile or desktop */
+.product__media img,
+.product-media-container img,
+.global-media-settings img,
+.media img,
+.card__media img,
+.card-wrapper .media img,
+.product-card-wrapper img,
+.thumbnail img,
+.cart-item__image,
+.ww-polaroid img,
+.ww-featured__media img,
+.ww-card__img-wrap img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+.media,
+.card__media,
+.product-media-container,
+.global-media-settings {
+  background: #fffaf3 !important;
+}
+
+/* Pages ChatGPT updated (About, FAQ, Shipping, Size guide, Returns, Contact) */
+.main-page-title,
+.page-title {
+  font-family: var(--ww-display) !important;
+  color: var(--ww-ink) !important;
+}
+.rte {
+  font-family: var(--ww-sans);
+  color: var(--ww-ink-soft);
+  line-height: 1.6;
+}
+.rte h2,
+.rte h3 {
+  font-family: var(--ww-display) !important;
+  color: var(--ww-ink) !important;
+  margin-top: 1.5em;
+}
+.rte p,
+.rte li {
+  font-size: 16px;
+}
+.rte a {
+  text-decoration: underline;
+}
+
+/* Checkout / cart must stay clickable */
+.cart__checkout-button,
+#checkout,
+.cart__dynamic-checkout-buttons,
+.shopify-payment-button,
+.shopify-payment-button__button {
+  display: block !important;
+  visibility: visible !important;
+}
+
