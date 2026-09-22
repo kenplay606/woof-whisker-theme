@@ -19,7 +19,9 @@ if (!customElements.get('localization-form')) {
         this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
         this.addEventListener('keydown', this.onContainerKeyDown.bind(this));
         this.addEventListener('focusout', this.closeSelector.bind(this));
-        this.elements.button.addEventListener('click', this.openSelector.bind(this));
+        if (this.elements.button) {
+          this.elements.button.addEventListener('click', this.openSelector.bind(this));
+        }
 
         if (this.elements.search) {
           this.elements.search.addEventListener('keyup', this.filterCountries.bind(this));
@@ -39,16 +41,16 @@ if (!customElements.get('localization-form')) {
       }
 
       hidePanel() {
-        this.elements.button.setAttribute('aria-expanded', 'false');
-        this.elements.panel.setAttribute('hidden', true);
+        if (this.elements.button) this.elements.button.setAttribute('aria-expanded', 'false');
+        if (this.elements.panel) this.elements.panel.setAttribute('hidden', true);
         if (this.elements.search) {
           this.elements.search.value = '';
           this.filterCountries();
           this.elements.search.setAttribute('aria-activedescendant', '');
         }
         document.body.classList.remove('overflow-hidden-mobile');
-        document.querySelector('.menu-drawer').classList.remove('country-selector-open');
-        this.header.preventHide = false;
+        document.querySelector('.menu-drawer')?.classList.remove('country-selector-open');
+        if (this.header) this.header.preventHide = false;
       }
 
       onContainerKeyDown(event) {
@@ -110,6 +112,7 @@ if (!customElements.get('localization-form')) {
       }
 
       openSelector() {
+        if (!this.elements.button || !this.elements.panel) return;
         this.elements.button.focus();
         this.elements.panel.toggleAttribute('hidden');
         this.elements.button.setAttribute(

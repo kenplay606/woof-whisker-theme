@@ -78,6 +78,90 @@
       {{ body_font_bold_italic | font_face: font_display: 'swap' }}
       {{ settings.type_header_font | font_face: font_display: 'swap' }}
 
+      /* Hardcoded schemes so the storefront never depends on empty editor Colors. */
+      :root,
+      .color-,
+      .color-scheme-1 {
+        --color-background: 243,237,227;
+        --gradient-background: #f3ede3;
+        --color-foreground: 26,22,18;
+        --color-background-contrast: 212,198,180;
+        --color-shadow: 26,22,18;
+        --color-button: 110,59,34;
+        --color-button-text: 255,250,243;
+        --color-secondary-button: 243,237,227;
+        --color-secondary-button-text: 110,59,34;
+        --color-link: 110,59,34;
+        --color-badge-foreground: 26,22,18;
+        --color-badge-background: 243,237,227;
+        --color-badge-border: 26,22,18;
+        --payment-terms-background-color: #f3ede3;
+      }
+      .color-scheme-2 {
+        --color-background: 255,250,243;
+        --gradient-background: #fffaf3;
+        --color-foreground: 26,22,18;
+        --color-background-contrast: 212,198,180;
+        --color-shadow: 26,22,18;
+        --color-button: 110,59,34;
+        --color-button-text: 255,250,243;
+        --color-secondary-button: 255,250,243;
+        --color-secondary-button-text: 26,22,18;
+        --color-link: 26,22,18;
+        --color-badge-foreground: 26,22,18;
+        --color-badge-background: 255,250,243;
+        --color-badge-border: 26,22,18;
+        --payment-terms-background-color: #fffaf3;
+      }
+      .color-scheme-3 {
+        --color-background: 28,20,16;
+        --gradient-background: #1c1410;
+        --color-foreground: 255,250,243;
+        --color-background-contrast: 74,64,56;
+        --color-shadow: 26,22,18;
+        --color-button: 194,78,26;
+        --color-button-text: 255,250,243;
+        --color-secondary-button: 28,20,16;
+        --color-secondary-button-text: 255,250,243;
+        --color-link: 255,250,243;
+        --color-badge-foreground: 255,250,243;
+        --color-badge-background: 28,20,16;
+        --color-badge-border: 255,250,243;
+        --payment-terms-background-color: #1c1410;
+      }
+      .color-scheme-4 {
+        --color-background: 110,59,34;
+        --gradient-background: #6e3b22;
+        --color-foreground: 255,250,243;
+        --color-background-contrast: 87,46,26;
+        --color-shadow: 26,22,18;
+        --color-button: 255,250,243;
+        --color-button-text: 110,59,34;
+        --color-secondary-button: 110,59,34;
+        --color-secondary-button-text: 255,250,243;
+        --color-link: 255,250,243;
+        --color-badge-foreground: 255,250,243;
+        --color-badge-background: 110,59,34;
+        --color-badge-border: 255,250,243;
+        --payment-terms-background-color: #6e3b22;
+      }
+      .color-scheme-5 {
+        --color-background: 194,78,26;
+        --gradient-background: #c24e1a;
+        --color-foreground: 255,250,243;
+        --color-background-contrast: 154,52,18;
+        --color-shadow: 26,22,18;
+        --color-button: 255,250,243;
+        --color-button-text: 194,78,26;
+        --color-secondary-button: 194,78,26;
+        --color-secondary-button-text: 255,250,243;
+        --color-link: 255,250,243;
+        --color-badge-foreground: 255,250,243;
+        --color-badge-background: 194,78,26;
+        --color-badge-border: 255,250,243;
+        --payment-terms-background-color: #c24e1a;
+      }
+
       {% for scheme in settings.color_schemes -%}
         {% assign scheme_classes = scheme_classes | append: ', .color-' | append: scheme.id %}
         {% if forloop.index == 1 -%}

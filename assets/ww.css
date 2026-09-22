@@ -642,3 +642,86 @@ sticky-header,
   visibility: visible !important;
 }
 
+/* Account dropdown — always solid white, above the announcement bar */
+shopify-account,
+shopify-account.header__icon {
+  --shopify-account-color-background: #ffffff !important;
+  --shopify-account-color-text: #1a1612 !important;
+  --shopify-account-color-accent: #5b21b6 !important;
+  --shopify-account-color-accent-text: #ffffff !important;
+  z-index: 80;
+}
+shopify-account::part(dialog),
+shopify-account::part(panel),
+shopify-account::part(menu),
+shopify-account::part(popover) {
+  background: #ffffff !important;
+  color: #1a1612 !important;
+  opacity: 1 !important;
+  box-shadow: 0 16px 40px rgb(26 22 18 / 0.18);
+}
+html.ww-account-open .utility-bar,
+html.ww-account-open .announcement-bar,
+html.ww-account-open .shopify-section-announcement-bar,
+html.ww-account-open .announcement-bar-section {
+  z-index: 1 !important;
+}
+html.ww-account-open sticky-header,
+html.ww-account-open .header-wrapper,
+html.ww-account-open .section-header {
+  z-index: 70 !important;
+}
+
+/* Currency switcher */
+.ww-currency-form {
+  margin: 0;
+}
+.ww-currency {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  border: 1px solid #d4c6b4;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.ww-currency__btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #4a4038;
+  font-family: var(--ww-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0 10px;
+  height: 32px;
+  cursor: pointer;
+  line-height: 1;
+}
+.ww-currency__btn.is-active {
+  background: #1c1410;
+  color: #fffaf3;
+}
+.footer .ww-currency {
+  border-color: rgb(255 250 243 / 0.24);
+  background: rgb(255 250 243 / 0.08);
+}
+.footer .ww-currency__btn {
+  color: #fffaf3;
+}
+.footer .ww-currency__btn.is-active {
+  background: #fffaf3;
+  color: #1c1410;
+}
+.header__icons .ww-currency {
+  margin-right: 8px;
+}
+@media (max-width: 749px) {
+  .header__icons .ww-currency__btn {
+    padding: 0 8px;
+    font-size: 10px;
+  }
+}
+
+

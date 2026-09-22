@@ -1,0 +1,54 @@
+{%- comment -%}
+  Compact HKD / USD / GBP switcher.
+  Shopify Markets must include Hong Kong, United States, and United Kingdom
+  for prices to convert. The buttons always show those three currencies.
+  Accepts: form_id
+{%- endcomment -%}
+{%- liquid
+  assign ww_form_id = form_id | default: 'WWCurrencyForm'
+  assign ww_active = localization.country.iso_code
+-%}
+{% form 'localization', id: ww_form_id, class: 'ww-currency-form' %}
+  <div class="ww-currency" role="group" aria-label="Currency">
+    <button
+      type="button"
+      class="ww-currency__btn{% if ww_active == 'HK' %} is-active{% endif %}"
+      data-country="HK"
+      aria-pressed="{% if ww_active == 'HK' %}true{% else %}false{% endif %}"
+    >
+      HKD
+    </button>
+    <button
+      type="button"
+      class="ww-currency__btn{% if ww_active == 'US' %} is-active{% endif %}"
+      data-country="US"
+      aria-pressed="{% if ww_active == 'US' %}true{% else %}false{% endif %}"
+    >
+      USD
+    </button>
+    <button
+      type="button"
+      class="ww-currency__btn{% if ww_active == 'GB' %} is-active{% endif %}"
+      data-country="GB"
+      aria-pressed="{% if ww_active == 'GB' %}true{% else %}false{% endif %}"
+    >
+      GBP
+    </button>
+  </div>
+  <input type="hidden" name="country_code" value="{{ localization.country.iso_code }}">
+{% endform %}
+<script>
+  (function () {
+    var form = document.getElementById({{ ww_form_id | json }});
+    if (!form || form.dataset.wwBound) return;
+    form.dataset.wwBound = '1';
+    form.querySelectorAll('[data-country]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var input = form.querySelector('input[name="country_code"]');
+        if (!input) return;
+        input.value = btn.getAttribute('data-country');
+        form.submit();
+      });
+    });
+  })();
+</script>

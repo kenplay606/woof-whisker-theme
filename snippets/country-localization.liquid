@@ -94,6 +94,9 @@
           aria-label="{{ 'localization.popular_countries_regions' | t }}"
         >
           {%- for country in popular_countries -%}
+            {%- unless country.iso_code == 'HK' or country.iso_code == 'US' or country.iso_code == 'GB' -%}
+              {%- continue -%}
+            {%- endunless -%}
             <li class="disclosure__item" tabindex="-1">
               <a
                 class="link link--text disclosure__link caption-large focus-inset"
@@ -123,6 +126,9 @@
       {% endif %}
       <ul role="list" class="list-unstyled countries">
         {%- for country in localization.available_countries -%}
+          {%- unless country.iso_code == 'HK' or country.iso_code == 'US' or country.iso_code == 'GB' -%}
+            {%- continue -%}
+          {%- endunless -%}
           <li class="disclosure__item" tabindex="-1">
             <a
               class="link link--text disclosure__link caption-large focus-inset"
