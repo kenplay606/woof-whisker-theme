@@ -9,11 +9,12 @@
   {% render 'cart-notification' %}
 {% endcomment %}
 
+{% render 'ww-overlays' %}
 <cart-notification>
   <div class="cart-notification-wrapper{% if desktop_menu_type != 'drawer' %} page-width{% endif %}">
     <div
       id="cart-notification"
-      class="cart-notification focus-inset{% if color_scheme %} color-{{ color_scheme }} gradient{% endif %}"
+      class="cart-notification focus-inset"
       aria-modal="true"
       aria-label="{{ 'general.cart.item_added' | t }}"
       role="dialog"

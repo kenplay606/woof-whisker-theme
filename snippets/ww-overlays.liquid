@@ -1,0 +1,52 @@
+{% style %}
+#cart-notification,
+.cart-notification,
+cart-notification .cart-notification,
+.cart-notification-wrapper .cart-notification {
+  background: #fffaf3 !important;
+  background-image: none !important;
+  color: #1a1612 !important;
+  opacity: 1 !important;
+  z-index: 90 !important;
+  box-shadow: 0 18px 40px rgb(26 22 18 / 0.22);
+}
+.cart-notification .cart-notification__heading,
+.cart-notification .cart-notification__heading *,
+.cart-notification .cart-notification-product,
+.cart-notification .cart-notification-product *,
+.cart-notification .link,
+.cart-notification .button-label {
+  color: #1a1612 !important;
+}
+.cart-notification .button--secondary {
+  background: #fffaf3 !important;
+  color: #1a1612 !important;
+  border: 1px solid #d4c6b4 !important;
+}
+.cart-notification .button--primary {
+  background: #6e3b22 !important;
+  color: #fffaf3 !important;
+}
+#CartDrawer,
+#CartDrawer .drawer__inner,
+.cart-drawer,
+.cart-drawer .drawer__inner,
+cart-drawer,
+cart-drawer .drawer__inner {
+  background: #fffaf3 !important;
+  color: #1a1612 !important;
+}
+shopify-account,
+shopify-account.header__icon {
+  --shopify-account-color-background: #ffffff !important;
+  --shopify-account-color-text: #1a1612 !important;
+}
+shopify-account::part(dialog),
+shopify-account::part(panel),
+shopify-account::part(menu),
+shopify-account::part(popover) {
+  background: #ffffff !important;
+  color: #1a1612 !important;
+  opacity: 1 !important;
+}
+{% endstyle %}
