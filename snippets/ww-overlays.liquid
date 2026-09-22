@@ -49,4 +49,29 @@ shopify-account::part(popover) {
   color: #1a1612 !important;
   opacity: 1 !important;
 }
+
+/* Mobile header: hide shop-name wordmark so it cannot stack vertically */
+@media screen and (max-width: 749px) {
+  .ww-wordmark,
+  .header__heading .h2 {
+    display: none !important;
+  }
+  .header__heading,
+  h1.header__heading,
+  .header__heading-link {
+    min-width: 0 !important;
+    max-width: 56px !important;
+    overflow: hidden;
+  }
+  .header__heading-logo-wrapper,
+  .header__heading-logo {
+    max-height: 36px !important;
+    max-width: 56px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .header {
+    align-items: center !important;
+  }
+}
 {% endstyle %}
