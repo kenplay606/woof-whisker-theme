@@ -1,0 +1,170 @@
+{{ 'product-form.js' | asset_url | script_tag }}
+
+{%- liquid
+  assign cowboy_handle = 'nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs'
+  assign product = section.settings.product
+  if product == blank
+    assign product = all_products[cowboy_handle]
+  endif
+  assign variant = product.selected_or_first_available_variant
+  assign feat_alt = 'Corgi in the Cowboy Rider Costume jacket'
+  if product != blank and product.title != blank
+    assign feat_alt = product.title
+  endif
+-%}
+
+<section class="ww-featured">
+  <div class="ww-featured__inner">
+    <div class="ww-featured__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1600
+          | image_tag:
+            loading: 'lazy',
+            widths: '600, 900, 1200, 1600',
+            alt: feat_alt
+        }}
+      {%- else -%}
+        <img
+          src="{{ 'cowboy-2.jpg' | asset_url }}"
+          alt="{{ feat_alt | escape }}"
+          width="1200"
+          height="1500"
+        >
+      {%- endif -%}
+    </div>
+    <div class="ww-featured__copy">
+      <p class="ww-kicker">{{ section.settings.kicker | escape }}</p>
+      <h2 class="ww-featured__title">
+        {%- if product != blank -%}
+          {{ product.title }}
+        {%- else -%}
+          {{ section.settings.fallback_title | escape }}
+        {%- endif -%}
+      </h2>
+      <p class="ww-featured__short">
+        {%- if section.settings.short != blank -%}
+          {{ section.settings.short | escape }}
+        {%- elsif product != blank -%}
+          {{ product.description | strip_html | truncate: 140 }}
+        {%- endif -%}
+      </p>
+      {%- if product != blank -%}
+        <p class="ww-featured__price">
+          <span>{{ variant.price | money }}</span>
+          {%- if variant.compare_at_price > variant.price -%}
+            <span class="ww-featured__compare">{{ variant.compare_at_price | money }}</span>
+          {%- endif -%}
+        </p>
+      {%- endif -%}
+      <ul class="ww-featured__list">
+        <li>{{ section.settings.bullet_1 | escape }}</li>
+        <li>{{ section.settings.bullet_2 | escape }}</li>
+        <li>{{ section.settings.bullet_3 | escape }}</li>
+      </ul>
+      <div class="ww-featured__actions">
+        {%- if product != blank -%}
+          <product-form class="product-form" data-hide-errors="true" data-section="{{ section.id }}">
+            {%- form 'product', product, id: 'ww-featured-form', class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+              <input type="hidden" name="id" value="{{ variant.id }}" class="product-variant-id">
+              <button
+                type="submit"
+                name="add"
+                class="ww-btn ww-btn--bark"
+                {% if variant.available == false %}disabled{% endif %}
+              >
+                <span>
+                  {%- if variant.available -%}
+                    {{ section.settings.add_label | escape }}
+                  {%- else -%}
+                    Sold out
+                  {%- endif -%}
+                </span>
+                <span class="loading__spinner hidden">
+                  <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+                    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                  </svg>
+                </span>
+              </button>
+            {%- endform -%}
+          </product-form>
+          <a class="ww-btn ww-btn--ghost" href="{{ product.url }}">{{ section.settings.sizes_label | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WW featured product",
+  "tag": "div",
+  "class": "ww-sec",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (uses bundled cowboy photo if empty)"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker",
+      "default": "Featured product"
+    },
+    {
+      "type": "text",
+      "id": "fallback_title",
+      "label": "Fallback title",
+      "default": "Cowboy Rider Costume"
+    },
+    {
+      "type": "textarea",
+      "id": "short",
+      "label": "Short description",
+      "default": "The Reel look. Jacket that sits a tiny rancher on the dog’s back."
+    },
+    {
+      "type": "text",
+      "id": "bullet_1",
+      "label": "Bullet 1",
+      "default": "Tracked shipping"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2",
+      "label": "Bullet 2",
+      "default": "Selected styles on sale"
+    },
+    {
+      "type": "text",
+      "id": "bullet_3",
+      "label": "Bullet 3",
+      "default": "Measure chest. Between sizes, go up"
+    },
+    {
+      "type": "text",
+      "id": "add_label",
+      "label": "Add button",
+      "default": "Add to cart"
+    },
+    {
+      "type": "text",
+      "id": "sizes_label",
+      "label": "Sizes button",
+      "default": "See sizes"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WW featured product"
+    }
+  ]
+}
+{% endschema %}

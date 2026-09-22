@@ -1,0 +1,138 @@
+{%- liquid
+  assign collection = section.settings.collection
+  assign limit = section.settings.products_to_show | default: 8
+  assign tone = section.settings.tone | default: 'paper'
+-%}
+
+<section class="ww-rack ww-rack--{{ tone }}{% if tone == 'wood' %} ww-wood{% endif %}" aria-labelledby="ww-rack-{{ section.id }}">
+  <div class="ww-rack__inner">
+    <div class="ww-rack__head">
+      <div>
+        {%- if section.settings.kicker != blank -%}
+          <p class="ww-kicker">{{ section.settings.kicker | escape }}</p>
+        {%- endif -%}
+        <h2 class="ww-rack__title" id="ww-rack-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+        {%- if section.settings.subheading != blank -%}
+          <p class="ww-rack__sub">{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+      </div>
+      {%- if collection != blank -%}
+        <a class="ww-rack__all" href="{{ collection.url }}">View all →</a>
+      {%- endif -%}
+    </div>
+
+    {%- if collection != blank and collection.products_count > 0 -%}
+      <div class="ww-rack__grid">
+        {%- for product in collection.products limit: limit -%}
+          {%- assign variant = product.selected_or_first_available_variant -%}
+          {%- assign card_alt = product.title -%}
+          {%- if product.featured_image.alt != blank -%}
+            {%- assign card_alt = product.featured_image.alt -%}
+          {%- endif -%}
+          <article class="ww-card">
+            <a class="ww-card__link" href="{{ product.url }}">
+              <div class="ww-card__img-wrap">
+                {%- if product.featured_image != blank -%}
+                  {{
+                    product.featured_image
+                    | image_url: width: 800
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '320, 480, 640, 800',
+                      class: 'ww-card__img',
+                      alt: card_alt
+                  }}
+                {%- endif -%}
+              </div>
+              <div class="ww-card__body">
+                <p class="ww-card__badge">
+                  {%- if product.compare_at_price > product.price -%}
+                    Sale
+                  {%- else -%}
+                    &nbsp;
+                  {%- endif -%}
+                </p>
+                <h3 class="ww-card__title">{{ product.title }}</h3>
+                <p class="ww-card__price">
+                  <span>{{ variant.price | money }}</span>
+                  {%- if variant.compare_at_price > variant.price -%}
+                    <span class="ww-card__compare">{{ variant.compare_at_price | money }}</span>
+                  {%- endif -%}
+                </p>
+              </div>
+            </a>
+            <div class="ww-card__cta">
+              <a class="ww-btn ww-btn--bark ww-btn--sm" href="{{ product.url }}">View</a>
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+      {%- if collection != blank -%}
+        <a class="ww-rack__all-mobile" href="{{ collection.url }}">View all {{ section.settings.heading | escape }} →</a>
+      {%- endif -%}
+    {%- else -%}
+      <p class="ww-empty">
+        {%- if collection == blank -%}
+          Choose a collection in the theme editor for this section.
+        {%- else -%}
+          This collection has no products yet.
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WW collection",
+  "tag": "div",
+  "class": "ww-sec",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Halloween Costumes"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "select",
+      "id": "tone",
+      "label": "Background",
+      "options": [
+        { "value": "wood", "label": "Dark wood" },
+        { "value": "paper", "label": "Paper" }
+      ],
+      "default": "wood"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 8,
+      "label": "Products to show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WW collection"
+    }
+  ]
+}
+{% endschema %}

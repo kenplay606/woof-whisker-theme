@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "ww_hero": {
+      "type": "ww-hero",
+      "settings": {
+        "kicker": "Selected styles on sale",
+        "heading": "Halloween pet costumes.",
+        "subheading": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home.",
+        "button_1_label": "Shop Halloween",
+        "button_1_link": "shopify://collections/halloween",
+        "button_2_label": "Cowboy rider",
+        "button_2_link": "shopify://products/nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs"
+      }
+    },
+    "ww_featured": {
+      "type": "ww-featured",
+      "settings": {
+        "product": "nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs",
+        "kicker": "Featured product",
+        "fallback_title": "Cowboy Rider Costume",
+        "short": "The Reel look. Jacket that sits a tiny rancher on the dog’s back.",
+        "bullet_1": "Tracked shipping",
+        "bullet_2": "Selected styles on sale",
+        "bullet_3": "Measure chest. Between sizes, go up",
+        "add_label": "Add to cart",
+        "sizes_label": "See sizes"
+      }
+    },
+    "ww_halloween": {
+      "type": "ww-collection",
+      "settings": {
+        "collection": "halloween",
+        "kicker": "Costumes",
+        "heading": "Halloween Costumes",
+        "subheading": "Cowboy rider, bat hoodie, lion mane, dinosaur fleece, and costume packs.",
+        "tone": "wood",
+        "products_to_show": 8
+      }
+    },
+    "ww_everyday": {
+      "type": "ww-collection",
+      "settings": {
+        "collection": "everyday",
+        "kicker": "",
+        "heading": "Everyday Products",
+        "subheading": "Moving ball, paw cleaner, grooming glove, lick mat, snuffle mat and travel bottle.",
+        "tone": "paper",
+        "products_to_show": 8
+      }
+    },
+    "ww_trust": {
+      "type": "ww-trust",
+      "settings": {
+        "t1": "Tracked shipping",
+        "b1": "Every order is tracked. Delivery time depends on where it is going.",
+        "t2": "Selected styles on sale",
+        "b2": "Compare-at prices show the usual ticket. Sale prices are marked on the product.",
+        "t3": "Measure twice",
+        "b3": "Costume refunds are almost always a size miss. Chest behind the front legs, then go up.",
+        "link_label": "Size guide",
+        "link": "shopify://pages/size-guide"
+      }
+    }
+  },
+  "order": [
+    "ww_hero",
+    "ww_featured",
+    "ww_halloween",
+    "ww_everyday",
+    "ww_trust"
+  ]
+}

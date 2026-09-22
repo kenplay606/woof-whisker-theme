@@ -1,0 +1,119 @@
+{%- liquid
+  assign cowboy_handle = 'nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs'
+  assign btn2 = section.settings.button_2_link
+  if btn2 == blank
+    assign btn2 = all_products[cowboy_handle].url
+  endif
+  assign btn1 = section.settings.button_1_link
+  if btn1 == blank
+    assign btn1 = collections['halloween'].url | default: '/collections/halloween'
+  endif
+  assign hero_alt = 'Corgi wearing a cowboy rider costume for dogs'
+  if section.settings.image != blank and section.settings.image.alt != blank
+    assign hero_alt = section.settings.image.alt
+  endif
+-%}
+
+<section class="ww-hero ww-wood">
+  <div class="ww-hero__inner">
+    <div class="ww-hero__copy">
+      {%- if section.settings.kicker != blank -%}
+        <p class="ww-kicker">{{ section.settings.kicker | escape }}</p>
+      {%- endif -%}
+      <h1 class="ww-hero__title">{{ section.settings.heading }}</h1>
+      {%- if section.settings.subheading != blank -%}
+        <p class="ww-hero__sub">{{ section.settings.subheading | escape }}</p>
+      {%- endif -%}
+      <div class="ww-hero__actions">
+        {%- if section.settings.button_1_label != blank -%}
+          <a class="ww-btn ww-btn--pumpkin" href="{{ btn1 }}">{{ section.settings.button_1_label | escape }}</a>
+        {%- endif -%}
+        {%- if section.settings.button_2_label != blank and btn2 != blank -%}
+          <a class="ww-btn ww-btn--invert" href="{{ btn2 }}">{{ section.settings.button_2_label | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="ww-hero__media">
+      <div class="ww-polaroid">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1600
+            | image_tag:
+              loading: 'eager',
+              fetchpriority: 'high',
+              widths: '400, 600, 800, 1200, 1600',
+              alt: hero_alt
+          }}
+        {%- else -%}
+          <img
+            src="{{ 'cowboy-1.jpg' | asset_url }}"
+            alt="{{ hero_alt | escape }}"
+            width="1200"
+            height="1500"
+          >
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WW hero",
+  "tag": "div",
+  "class": "ww-sec",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Kicker",
+      "default": "Selected styles on sale"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Halloween pet costumes."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image (uses bundled cowboy photo if empty)"
+    },
+    {
+      "type": "text",
+      "id": "button_1_label",
+      "label": "Button 1 label",
+      "default": "Shop Halloween"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button 2 label",
+      "default": "Cowboy rider"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WW hero"
+    }
+  ]
+}
+{% endschema %}
