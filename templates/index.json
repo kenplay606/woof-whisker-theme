@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "ww_hero": {
@@ -12,18 +21,62 @@
         "button_2_link": "shopify://products/nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs"
       }
     },
-    "ww_featured": {
-      "type": "ww-featured",
+    "featured_product_3QtXYP": {
+      "type": "featured-product",
+      "blocks": {
+        "text_DNDhXN": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_W6yRPy": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h2"
+          }
+        },
+        "price_k4Ed3t": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_jFDLQf": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons_znjxPz": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        }
+      },
+      "block_order": [
+        "text_DNDhXN",
+        "title_W6yRPy",
+        "price_k4Ed3t",
+        "variant_picker_jFDLQf",
+        "buy_buttons_znjxPz"
+      ],
+      "name": "t:sections.featured-product.presets.name",
       "settings": {
-        "product": "nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs",
-        "kicker": "Featured product",
-        "fallback_title": "Cowboy Rider Costume",
-        "short": "The Reel look. Jacket that sits a tiny rancher on the dog’s back.",
-        "bullet_1": "Tracked shipping",
-        "bullet_2": "Selected styles on sale",
-        "bullet_3": "Measure chest. Between sizes, go up",
-        "add_label": "Add to cart",
-        "sizes_label": "See sizes"
+        "product": "cowboy-rider-costume",
+        "color_scheme": "",
+        "secondary_background": true,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "ww_halloween": {
@@ -64,7 +117,7 @@
   },
   "order": [
     "ww_hero",
-    "ww_featured",
+    "featured_product_3QtXYP",
     "ww_halloween",
     "ww_everyday",
     "ww_trust"
