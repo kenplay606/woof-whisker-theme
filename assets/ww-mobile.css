@@ -1,0 +1,68 @@
+/* Mobile header + equal product tiles (24 Sep 2026)
+   Loaded from snippets/meta-tags.liquid after ww.css */
+
+@media screen and (max-width: 749px) {
+  .header__heading,
+  .header__heading-link,
+  .ww-wordmark {
+    display: none !important;
+  }
+
+  .header {
+    grid-template-areas: "left-icons icons";
+    grid-template-columns: auto 1fr;
+  }
+
+  .header .shopify-block,
+  .header .shopify-app-block,
+  .header localization-form,
+  .header__icons .ww-currency,
+  .header .ww-currency-form {
+    display: none !important;
+  }
+
+  .header__icons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .header-wrapper .header {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+.header__heading-link {
+  white-space: nowrap;
+  word-break: keep-all;
+  max-width: 100%;
+}
+
+/* Same-size tiles: square frame, product letterboxed inside */
+.product-card-wrapper .card__inner.ratio,
+.product-card-wrapper .card__inner,
+.ww-card__img-wrap {
+  aspect-ratio: 1 / 1;
+}
+
+.product-card-wrapper .card__inner::before {
+  padding-bottom: 100% !important;
+}
+
+.product-card-wrapper .card__media,
+.product-card-wrapper .card .media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product-card-wrapper .media img,
+.product-card-wrapper .card__media img,
+.ww-card__img-wrap img,
+.ww-rack .ww-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
