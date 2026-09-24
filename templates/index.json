@@ -131,31 +131,11 @@
         "link_label": "Size guide",
         "link": "shopify://pages/size-guide"
       }
-    },
-    "1790178786aca6ab03": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_homepage_TDiFry": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget_homepage/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "product": "cowboy-rider-costume",
-            "review_data": "real_data",
-            "max_width": 1200
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_homepage_TDiFry"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "ww_hero",
     "featured_product_3QtXYP",
-    "1790178786aca6ab03",
     "ww_halloween",
     "featured_collection_epywRU",
     "ww_trust"
