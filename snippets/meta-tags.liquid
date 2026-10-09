@@ -11,9 +11,7 @@
   elsif request.page_type == 'password'
     assign og_url = request.origin
   endif
-%}
-
-{{ 'ww-mobile.css' | asset_url | stylesheet_tag }}
+-%}
 
 <meta property="og:site_name" content="{{ shop.name }}">
 <meta property="og:url" content="{{ og_url }}">
