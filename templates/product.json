@@ -41,19 +41,27 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": false
           }
+        },
+        "ship_note": {
+          "type": "text",
+          "settings": {
+            "text": "Tracked shipping. Hong Kong 1\u20135 days. UK and US 5\u201310 days.",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
         "title",
         "price",
-        "description",
+        "ship_note",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -63,7 +71,7 @@
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 16,
         "padding_bottom": 24
       }
     },
