@@ -15,8 +15,8 @@
       "type": "footer",
       "settings": {
         "color_scheme": "",
-        "newsletter_enable": true,
-        "newsletter_heading": "Selected styles on sale",
+        "newsletter_enable": false,
+        "newsletter_heading": "Hong Kong 1–5 days. UK and US 5–10 days.",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
