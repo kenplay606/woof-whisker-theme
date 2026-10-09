@@ -61,7 +61,7 @@
     "animations_hover_elements": "vertical-lift",
     "cart_type": "drawer",
     "cart_color_scheme": "scheme-1",
-    "currency_code_enabled": false,
+    "currency_code_enabled": true,
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
