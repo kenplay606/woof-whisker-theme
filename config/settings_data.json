@@ -11,61 +11,112 @@
   "current": {
     "logo": "shopify://shop_images/ww-logo.png",
     "logo_width": 140,
+    "type_header_font": "cormorant_n5",
+    "heading_scale": 110,
+    "type_body_font": "montserrat_n4",
+    "body_scale": 105,
+    "page_width": 1300,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 16,
+    "spacing_grid_vertical": 24,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 4,
+    "buttons_shadow_opacity": 0,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 40,
+    "variant_pills_radius": 4,
+    "variant_pills_shadow_opacity": 0,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 30,
+    "inputs_radius": 4,
+    "inputs_shadow_opacity": 0,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "scheme-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 0,
+    "card_corner_radius": 4,
+    "card_shadow_opacity": 0,
+    "collection_card_style": "standard",
+    "collection_card_color_scheme": "scheme-2",
+    "collection_card_corner_radius": 4,
+    "collection_card_shadow_opacity": 0,
+    "blog_card_style": "standard",
+    "blog_card_corner_radius": 4,
+    "blog_card_shadow_opacity": 0,
+    "text_boxes_radius": 4,
+    "text_boxes_shadow_opacity": 0,
+    "media_border_thickness": 0,
+    "media_border_opacity": 0,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "popup_corner_radius": 4,
+    "badge_position": "top left",
+    "badge_corner_radius": 4,
+    "sale_badge_color_scheme": "scheme-4",
+    "sold_out_badge_color_scheme": "scheme-3",
+    "animations_reveal_on_scroll": true,
+    "animations_hover_elements": "vertical-lift",
+    "cart_type": "drawer",
+    "cart_color_scheme": "scheme-1",
+    "currency_code_enabled": false,
     "content_for_index": [],
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#F7F1E8",
+          "background": "#F6F1E8",
           "background_gradient": "",
-          "text": "#2A2118",
-          "button": "#6E3B22",
-          "button_label": "#F7F1E8",
-          "secondary_button_label": "#6E3B22",
-          "shadow": "#2A2118"
+          "text": "#1C1917",
+          "button": "#1C1917",
+          "button_label": "#F6F1E8",
+          "secondary_button_label": "#1C1917",
+          "shadow": "#1C1917"
         }
       },
       "scheme-2": {
         "settings": {
           "background": "#FFFDF8",
           "background_gradient": "",
-          "text": "#2A2118",
-          "button": "#6E3B22",
+          "text": "#1C1917",
+          "button": "#1C1917",
           "button_label": "#FFFDF8",
-          "secondary_button_label": "#6E3B22",
-          "shadow": "#2A2118"
+          "secondary_button_label": "#44403C",
+          "shadow": "#1C1917"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#3C2A1E",
+          "background": "#241C16",
           "background_gradient": "",
-          "text": "#F7F1E8",
-          "button": "#C4A574",
-          "button_label": "#2A2118",
-          "secondary_button_label": "#F7F1E8",
-          "shadow": "#1A120C"
+          "text": "#F6F1E8",
+          "button": "#A16207",
+          "button_label": "#FFFFFF",
+          "secondary_button_label": "#F6F1E8",
+          "shadow": "#0C0A09"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#6E3B22",
+          "background": "#1C1917",
           "background_gradient": "",
-          "text": "#F7F1E8",
-          "button": "#F7F1E8",
-          "button_label": "#6E3B22",
-          "secondary_button_label": "#F7F1E8",
-          "shadow": "#2A2118"
+          "text": "#F6F1E8",
+          "button": "#F6F1E8",
+          "button_label": "#1C1917",
+          "secondary_button_label": "#F6F1E8",
+          "shadow": "#0C0A09"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#E7D8C6",
+          "background": "#EFE6D8",
           "background_gradient": "",
-          "text": "#2A2118",
-          "button": "#6E3B22",
-          "button_label": "#F7F1E8",
-          "secondary_button_label": "#2A2118",
-          "shadow": "#2A2118"
+          "text": "#1C1917",
+          "button": "#1C1917",
+          "button_label": "#F6F1E8",
+          "secondary_button_label": "#1C1917",
+          "shadow": "#1C1917"
         }
       }
     },
