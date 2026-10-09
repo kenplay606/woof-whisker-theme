@@ -20,15 +20,23 @@
           "type": "price",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "settings": {}
+        "trust_icons": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "heading_1": "Hong Kong 1–5 days. UK and US 5–10.",
+            "icon_2": "ruler",
+            "heading_2": "Measure the chest. Size up if between.",
+            "icon_3": "return",
+            "heading_3": "14-day returns if unused."
+          }
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -38,22 +46,19 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
         },
-        "ship_note": {
-          "type": "text",
-          "settings": {
-            "text": "Tracked shipping. Hong Kong 1\u20135 days. UK and US 5\u201310 days.",
-            "text_style": "body"
-          }
+        "description": {
+          "type": "description",
+          "settings": {}
         }
       },
       "block_order": [
         "title",
         "price",
-        "ship_note",
+        "trust_icons",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -62,7 +67,7 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "medium",
+        "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "thumbnail",
@@ -71,8 +76,8 @@
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 16,
-        "padding_bottom": 24
+        "padding_top": 28,
+        "padding_bottom": 36
       }
     },
     "related-products": {
@@ -83,14 +88,14 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
-        "color_scheme": "",
-        "image_ratio": "square",
+        "color_scheme": "scheme-5",
+        "image_ratio": "adapt",
         "image_shape": "default",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
-        "padding_bottom": 28
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     }
   },
