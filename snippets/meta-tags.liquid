@@ -2,7 +2,11 @@
   assign og_title = page_title | default: shop.name
   assign og_url = canonical_url | default: request.origin
   assign og_type = 'website'
-  assign og_description = page_description | default: shop.description | default: shop.name
+  if request.page_type == 'index'
+    assign og_description = 'Halloween costumes and everyday gear for dogs and cats. Tracked shipping to Hong Kong, the UK, and the US.'
+  else
+    assign og_description = page_description | default: shop.description | default: shop.name
+  endif
 
   if request.page_type == 'product'
     assign og_type = 'product'
