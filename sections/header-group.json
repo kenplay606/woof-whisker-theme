@@ -17,8 +17,8 @@
         "announcement": {
           "type": "announcement",
           "settings": {
-            "text": "Some Products on sale",
-            "link": "shopify://collections/halloween"
+            "text": "Hong Kong 1\u20135 days. UK and US 5\u201310 days.",
+            "link": "shopify://pages/shipping"
           }
         }
       },
