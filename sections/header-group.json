@@ -17,12 +17,14 @@
         "announcement": {
           "type": "announcement",
           "settings": {
-            "text": "Hong Kong 1\u20135 days. UK and US 5\u201310 days.",
+            "text": "Hong Kong 1–5 days. UK and US 5–10 days.",
             "link": "shopify://pages/shipping"
           }
         }
       },
-      "block_order": ["announcement"],
+      "block_order": [
+        "announcement"
+      ],
       "settings": {
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -41,16 +43,19 @@
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "always",
-        "show_line_separator": true,
+        "show_line_separator": false,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
         "enable_country_selector": true,
         "enable_language_selector": false,
         "margin_bottom": 0,
-        "padding_top": 4,
-        "padding_bottom": 4
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     }
   },
-  "order": ["announcement-bar", "header"]
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
 }
