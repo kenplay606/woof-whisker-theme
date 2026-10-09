@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Halloween pet costumes.",
+            "heading": "Pet costumes, sized properly.",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home.",
+            "text": "Cowboy, dinosaur, lion and bat. Measure the chest, then order.",
             "text_style": "body"
           }
         },
@@ -32,55 +32,29 @@
             "button_label_1": "Shop Halloween",
             "button_link_1": "shopify://collections/halloween",
             "button_style_secondary_1": false,
-            "button_label_2": "Cowboy rider",
-            "button_link_2": "shopify://products/cowboy-rider-costume",
+            "button_label_2": "",
+            "button_link_2": "",
             "button_style_secondary_2": true
           }
         }
       },
-      "block_order": ["heading", "text", "buttons"],
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
       "settings": {
         "image": "shopify://shop_images/ww-hero-cowboy.jpg",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-left",
         "desktop_content_alignment": "left",
         "show_text_box": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": false
-      }
-    },
-    "featured_product": {
-      "type": "featured-product",
-      "blocks": {
-        "title": { "type": "title", "settings": { "heading_size": "h2" } },
-        "price": { "type": "price", "settings": {} },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": { "picker_type": "button", "swatch_shape": "circle" }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": { "show_dynamic_checkout": true, "show_gift_card_recipient": false }
-        }
-      },
-      "block_order": ["title", "price", "variant_picker", "buy_buttons"],
-      "settings": {
-        "product": "cowboy-rider-costume",
-        "color_scheme": "scheme-1",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "halloween_collection": {
@@ -89,7 +63,7 @@
         "collection": "halloween",
         "products_to_show": 8,
         "title": "Halloween costumes",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "<p>Cowboy rider, bat hoodie, lion mane and dinosaur fleece.</p>",
         "show_description": false,
         "description_style": "body",
@@ -97,7 +71,7 @@
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "outline",
         "color_scheme": "scheme-3",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -107,8 +81,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 56
       }
     },
     "everyday_collection": {
@@ -117,7 +91,7 @@
         "collection": "everyday-items",
         "products_to_show": 8,
         "title": "Everyday gear",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -125,7 +99,7 @@
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
-        "view_all_style": "solid",
+        "view_all_style": "outline",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -135,8 +109,8 @@
         "quick_add": "none",
         "columns_mobile": "2",
         "swipe_on_mobile": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
     "multicolumn": {
@@ -146,46 +120,49 @@
           "type": "column",
           "settings": {
             "title": "Tracked shipping",
-            "text": "<p>Hong Kong 1\u20135 business days. UK and US 5\u201310 business days. The clock starts when the order is dispatched.</p>"
+            "text": "<p>Hong Kong 1–5 business days. UK and US 5–10 business days, after dispatch.</p>"
           }
         },
         "countries": {
           "type": "column",
           "settings": {
             "title": "Three countries",
-            "text": "<p>We ship to Hong Kong, the United Kingdom, and the United States.</p>"
+            "text": "<p>Hong Kong, the United Kingdom, and the United States.</p>"
           }
         },
         "size": {
           "type": "column",
           "settings": {
             "title": "Measure twice",
-            "text": "<p>Costume refunds are almost always a size miss. Measure the chest behind the front legs, then go up.</p>",
+            "text": "<p>Measure the chest behind the front legs. Between sizes, go up.</p>",
             "link_label": "Size guide",
             "link": "shopify://pages/size-guide"
           }
         }
       },
-      "block_order": ["ship", "countries", "size"],
+      "block_order": [
+        "ship",
+        "countries",
+        "size"
+      ],
       "settings": {
-        "title": "",
+        "title": "Before you order",
         "heading_size": "h2",
         "image_width": "full",
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_product",
     "halloween_collection",
     "everyday_collection",
     "multicolumn"
