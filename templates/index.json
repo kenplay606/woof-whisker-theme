@@ -9,65 +9,68 @@
  */
 {
   "sections": {
-    "ww_hero": {
-      "type": "ww-hero",
-      "settings": {
-        "kicker": "Tracked to Hong Kong, the UK and the US",
-        "heading": "Halloween pet costumes.",
-        "subheading": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home.",
-        "button_1_label": "Shop Halloween",
-        "button_1_link": "shopify://collections/halloween",
-        "button_2_label": "Cowboy rider",
-        "button_2_link": "shopify://products/cowboy-rider-costume"
-      }
-    },
-    "featured_product_3QtXYP": {
-      "type": "featured-product",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "text_DNDhXN": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Halloween pet costumes.",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
           "type": "text",
           "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
+            "text": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home.",
+            "text_style": "body"
           }
         },
-        "title_W6yRPy": {
-          "type": "title",
+        "buttons": {
+          "type": "buttons",
           "settings": {
-            "heading_size": "h2"
-          }
-        },
-        "price_k4Ed3t": {
-          "type": "price",
-          "settings": {}
-        },
-        "variant_picker_jFDLQf": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "dropdown",
-            "swatch_shape": "circle"
-          }
-        },
-        "buy_buttons_znjxPz": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
+            "button_label_1": "Shop Halloween",
+            "button_link_1": "shopify://collections/halloween",
+            "button_style_secondary_1": false,
+            "button_label_2": "Cowboy rider",
+            "button_link_2": "shopify://products/cowboy-rider-costume",
+            "button_style_secondary_2": true
           }
         }
       },
-      "block_order": [
-        "text_DNDhXN",
-        "title_W6yRPy",
-        "price_k4Ed3t",
-        "variant_picker_jFDLQf",
-        "buy_buttons_znjxPz"
-      ],
-      "name": "t:sections.featured-product.presets.name",
+      "block_order": ["heading", "text", "buttons"],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured_product": {
+      "type": "featured-product",
+      "blocks": {
+        "title": { "type": "title", "settings": { "heading_size": "h2" } },
+        "price": { "type": "price", "settings": {} },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": { "picker_type": "button", "swatch_shape": "circle" }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": { "show_dynamic_checkout": true, "show_gift_card_recipient": false }
+        }
+      },
+      "block_order": ["title", "price", "variant_picker", "buy_buttons"],
       "settings": {
         "product": "cowboy-rider-costume",
-        "color_scheme": "",
-        "secondary_background": true,
+        "color_scheme": "scheme-1",
+        "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
@@ -79,23 +82,39 @@
         "padding_bottom": 36
       }
     },
-    "ww_halloween": {
-      "type": "ww-collection",
+    "halloween_collection": {
+      "type": "featured-collection",
       "settings": {
         "collection": "halloween",
-        "kicker": "Costumes",
-        "heading": "Halloween Costumes",
-        "subheading": "Cowboy rider, bat hoodie, lion mane, dinosaur fleece, and costume packs.",
-        "tone": "wood",
-        "products_to_show": 8
+        "products_to_show": 8,
+        "title": "Halloween costumes",
+        "heading_size": "h1",
+        "description": "<p>Cowboy rider, bat hoodie, lion mane and dinosaur fleece.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-3",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
-    "featured_collection_epywRU": {
+    "everyday_collection": {
       "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "collection": "everyday-items",
-        "products_to_show": 4,
+        "products_to_show": 8,
         "title": "Everyday gear",
         "heading_size": "h1",
         "description": "",
@@ -106,7 +125,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -114,30 +133,60 @@
         "show_rating": false,
         "quick_add": "none",
         "columns_mobile": "2",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "ww_trust": {
-      "type": "ww-trust",
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "ship": {
+          "type": "column",
+          "settings": {
+            "title": "Tracked shipping",
+            "text": "<p>Hong Kong 1\u20135 business days. UK and US 5\u201310 business days. The clock starts when the order is dispatched.</p>"
+          }
+        },
+        "countries": {
+          "type": "column",
+          "settings": {
+            "title": "Three countries",
+            "text": "<p>We ship to Hong Kong, the United Kingdom, and the United States.</p>"
+          }
+        },
+        "size": {
+          "type": "column",
+          "settings": {
+            "title": "Measure twice",
+            "text": "<p>Costume refunds are almost always a size miss. Measure the chest behind the front legs, then go up.</p>",
+            "link_label": "Size guide",
+            "link": "shopify://pages/size-guide"
+          }
+        }
+      },
+      "block_order": ["ship", "countries", "size"],
       "settings": {
-        "t1": "Tracked shipping",
-        "b1": "Hong Kong 1\u20135 business days. UK and US 5\u201310 business days. Times start when the order is dispatched.",
-        "t2": "Three countries",
-        "b2": "We ship to Hong Kong, the United Kingdom, and the United States.",
-        "t3": "Measure twice",
-        "b3": "Costume refunds are almost always a size miss. Chest behind the front legs, then go up.",
-        "link_label": "Size guide",
-        "link": "shopify://pages/size-guide"
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "ww_hero",
-    "featured_product_3QtXYP",
-    "ww_halloween",
-    "featured_collection_epywRU",
-    "ww_trust"
+    "image_banner",
+    "featured_product",
+    "halloween_collection",
+    "everyday_collection",
+    "multicolumn"
   ]
 }
