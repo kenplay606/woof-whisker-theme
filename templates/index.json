@@ -12,13 +12,13 @@
     "ww_hero": {
       "type": "ww-hero",
       "settings": {
-        "kicker": "Selected styles on sale",
+        "kicker": "Tracked to Hong Kong, the UK and the US",
         "heading": "Halloween pet costumes.",
         "subheading": "Cowboy, dino, lion and bat looks, plus everyday gear for walks, play and home.",
         "button_1_label": "Shop Halloween",
         "button_1_link": "shopify://collections/halloween",
         "button_2_label": "Cowboy rider",
-        "button_2_link": "shopify://products/nonor-halloween-party-dog-clothes-funny-cowboy-dressing-up-jacket-coats-french-bulldog-chihuahua-costumes-for-small-large-dogs"
+        "button_2_link": "shopify://products/cowboy-rider-costume"
       }
     },
     "featured_product_3QtXYP": {
@@ -96,7 +96,7 @@
       "settings": {
         "collection": "everyday-items",
         "products_to_show": 4,
-        "title": "Featured collection",
+        "title": "Everyday gear",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -123,9 +123,9 @@
       "type": "ww-trust",
       "settings": {
         "t1": "Tracked shipping",
-        "b1": "Every order is tracked. Delivery time depends on where it is going.",
-        "t2": "Selected styles on sale",
-        "b2": "Compare-at prices show the usual ticket. Sale prices are marked on the product.",
+        "b1": "Hong Kong 1\u20135 business days. UK and US 5\u201310 business days. Times start when the order is dispatched.",
+        "t2": "Three countries",
+        "b2": "We ship to Hong Kong, the United Kingdom, and the United States.",
         "t3": "Measure twice",
         "b3": "Costume refunds are almost always a size miss. Chest behind the front legs, then go up.",
         "link_label": "Size guide",
