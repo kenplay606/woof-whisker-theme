@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Pet costumes, sized properly.",
+            "heading": "<strong>Pet costumes, sized properly.</strong>",
             "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "Cowboy, dinosaur, lion and bat. Measure the chest, then order.",
+            "text": "<strong>Cowboy, dinosaur, lion and bat. Measure the chest, then order.</strong>",
             "text_style": "body"
           }
         },
@@ -205,7 +205,7 @@
             "corner_styling": "soft",
             "header_text_color": "#000000",
             "text_color": "#000000",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,

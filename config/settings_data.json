@@ -143,6 +143,17 @@
           "secondary_button_label": "#1c1917",
           "shadow": "#1c1917"
         }
+      },
+      "scheme-banner-black-white": {
+        "settings": {
+          "background": "#000000",
+          "background_gradient": "",
+          "text": "#FFFFFF",
+          "button": "#FFFFFF",
+          "button_label": "#000000",
+          "secondary_button_label": "#FFFFFF",
+          "shadow": "#000000"
+        }
       }
     }
   }
