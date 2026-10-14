@@ -54,7 +54,7 @@
         "color_scheme": "scheme-2",
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
-        "show_text_below": false
+        "show_text_below": true
       }
     },
     "halloween_collection": {
@@ -174,17 +174,7 @@
           "settings": {
             "show_sample_reviews": true,
             "reviews_selection": "all",
-            "products": [
-              "usb-c-paw-cleaner-cup",
-              "4l-usb-smart-button-wifi-app-video-pet-feeder-automatic-cat-food-dispenser-bowl-dog-slow-food-feeder-with-timed-camera-feeder",
-              "pet-supplies-casual-halloween-pet-clothes-fashion-warm-pet-cosplay-clothes-with-wings-soft-dog-bat-hoodie-pet-costume",
-              "cowboy-rider-costume",
-              "deshedding-grooming-glove",
-              "dinosaur-fleece-hoodie",
-              "lion-mane-hat",
-              "no-spill-travel-bottle",
-              "rechargeable-moving-ball"
-            ],
+            "products": [],
             "filter_pinned": false,
             "filter_featured": false,
             "filter_custom_tags": "",
@@ -193,8 +183,8 @@
             "display_order": "media_first",
             "no_image_fallback": "review_text_only",
             "max_reviews": 20,
-            "review_length": "medium",
-            "text_size": "medium",
+            "review_length": "small",
+            "text_size": "small",
             "image_ratio": "1",
             "reviews_shown": 4,
             "show_reviewer_name": true,
