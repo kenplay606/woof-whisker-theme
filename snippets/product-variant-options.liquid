@@ -33,9 +33,9 @@
       assign swatch_value = null
     endif
 
-    assign option_disabled = true
-    if value.available
-      assign option_disabled = false
+    assign option_disabled = false
+    if value.available == false
+      assign option_disabled = true
     endif
   -%}
 
@@ -64,7 +64,7 @@
   {%- if picker_type == 'swatch' -%}
     {%- capture help_text -%}
       <span class="visually-hidden">{{ escaped_value }}</span>
-      {{ label_unavailable }}
+      {% if option_disabled %}{{ label_unavailable }}{% endif %}
     {%- endcapture -%}
 
     {%
@@ -97,7 +97,7 @@
     >
     <label for="{{ input_id }}">
       {{ value -}}
-      {% unless option_disabled %}{{ label_unavailable }}{% endunless %}
+      {% if option_disabled %}{{ label_unavailable }}{% endif %}
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
@@ -118,7 +118,7 @@
         {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
         {{- value -}}
-      {%- endif %}
+      {%- endif -%}
     </option>
   {%- endif -%}
 {%- endfor -%}
